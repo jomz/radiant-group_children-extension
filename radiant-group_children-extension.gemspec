@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{radiant-group_children-extension}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Benny Degezelle"]
@@ -25,9 +25,9 @@ Gem::Specification.new do |s|
      "features/support/env.rb",
      "features/support/paths.rb",
      "group_children_extension.rb",
-     "lib/array_hack.rb",
      "lib/group_tags.rb",
      "lib/tasks/group_children_extension_tasks.rake",
+     "radiant-group_children-extension.gemspec",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
