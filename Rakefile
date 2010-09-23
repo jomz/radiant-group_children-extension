@@ -3,10 +3,11 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "radiant-group_children-extension"
     gem.summary = %Q{Group Children Extension for Radiant CMS}
-    gem.description = %Q{Describe your extension here}
+    gem.description = %Q{Adds the ability to iterate over a page's children per n items.}
     gem.email = "benny@gorilla-webdesign.be"
     gem.homepage = "http://github.com/jomz/radiant-group_children-extension"
     gem.authors = ["Benny Degezelle"]
+    gem.add_dependency 'radiant', ">=0.9.1"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
