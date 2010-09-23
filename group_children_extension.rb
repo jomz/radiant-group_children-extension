@@ -4,7 +4,6 @@ class GroupChildrenExtension < Radiant::Extension
   url "http://github.com/jomz/radiant-group_children-extension"
   
   def activate
-    Array.send :include, ArrayHack    
     Page.send :include, GroupTags
   end
 end
