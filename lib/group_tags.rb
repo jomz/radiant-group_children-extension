@@ -9,7 +9,7 @@ module GroupTags
     
     *Usage:*
     
-    <pre><code><r:children:grouped [per="number"] [limit="number"]
+    <pre><code><r:children:grouped [size="number"] [limit="number"]
      [by="published_at|updated_at|created_at|slug|title|keywords|description"]
      [order="asc|desc"] 
      [status="draft|reviewed|published|hidden|all"]
@@ -20,7 +20,7 @@ module GroupTags
   }
   tag 'children:grouped' do |tag|
     options = children_find_options(tag)
-    group_size = tag.attr['per'].to_i || 2
+    group_size = tag.attr['size'].to_i || 2
     tag.locals.groups = tag.locals.children.all(options).inject([]) do |groups, value|
       groups << [] if !groups.last || groups.last.size >= group_size
       groups.last << value
