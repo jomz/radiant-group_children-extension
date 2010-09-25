@@ -27,10 +27,10 @@ module GroupTags
       groups
     end
     result = []
-    tag.locals.groups.each_with_index do |group, i|
+    tag.locals.groups.map do |group|
       tag.locals.children = group
-      tag.locals.first_group = i == 0
-      tag.locals.last_group = i == tag.locals.groups.length - 1
+      tag.locals.first_group = group == tag.locals.groups.first
+      tag.locals.last_group = group == tag.locals.groups.last
       result << tag.expand
     end
     result
@@ -50,11 +50,11 @@ module GroupTags
   
   tag 'children:grouped:children:each' do |tag|
     result = []
-    tag.locals.children.each_with_index do |page, i|
+    tag.locals.children.map do |page|
       tag.locals.child = page
       tag.locals.page = page
-      tag.locals.first_child = i == 0
-      tag.locals.last_child = i == tag.locals.children.length - 1
+      tag.locals.first_child = page == tag.locals.children.first
+      tag.locals.last_child = page == tag.locals.children.last
       result << tag.expand
     end
     result
