@@ -8,7 +8,7 @@ Until now we have sometimes used javascript to alter markup, which is very ucky.
 
 Here is the solution;
 
-    <r:children:grouped per="3">
+    <r:children:grouped size="3">
       <div>
         <r:children:each> ... </r:children:each>
       </div>
