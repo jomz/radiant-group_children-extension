@@ -33,7 +33,7 @@ module GroupTags
       tag.locals.last_group = group == tag.locals.groups.last
       result << tag.expand
     end
-    result
+    result.join ""
   end
   
   tag 'children:grouped:if_first' do |tag|
@@ -57,7 +57,7 @@ module GroupTags
       tag.locals.last_child = page == tag.locals.children.last
       result << tag.expand
     end
-    result
+    result.join ""
   end
   
   tag 'children:grouped:children:each:if_first' do |tag|
